@@ -9,7 +9,7 @@ const port = 3000;
 app.use(express.json());
 app.use(cors());
 
-app.get('/jobs', (req, res) => {
+app.get(['/', '/jobs'], (req, res) => {
   const cursor = Number(req.query.cursor) || 0;
   const limit = Number(req.query.limit) || 12;
 
