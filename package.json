@@ -1,7 +1,7 @@
 {
     "name": "skills-api",
     "version": "0.0.0",
-    "main": "dist/index.js",
+    "main": "index.js",
     "scripts": {
         "dev": "nodemon -e ts,js -w api -x 'node -r esbuild-register ./api/index.ts'",
         "start": "node -r esbuild-register ./api/index.ts",

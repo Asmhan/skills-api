@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 
-import { data } from './data';
+import { data } from './api/data';
 
 const app = express();
 const port = 3000;
@@ -28,7 +28,7 @@ app.get('/jobs', (req, res) => {
 });
 
 app.get('/jobs/search', (req, res) => {
-  const { query } = req.query as { query: string };
+  const { query } = req.query;
 
   if (query) {
     const jobs = data.jobs.filter((x) => x.attributes.title.toLowerCase().includes(query));
